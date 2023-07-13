@@ -38,7 +38,7 @@ function mergeSort(arr) {
   let primeraMitadOrdenada = mergeSort(primeraMitad)
   let segundaMitadOrdenada = mergeSort(segundaMitad)
   // console.log(primeraMitadOrdenada, segundaMitadOrdenada);
-  console.log(); merge(primeraMitadOrdenada, segundaMitadOrdenada)
+  // console.log(); merge(primeraMitadOrdenada, segundaMitadOrdenada)
 }
 
 
