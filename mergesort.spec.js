@@ -1,9 +1,9 @@
 describe('Split Array function', function() {
-  it('es capaz de dividir el arreglo en dos partes', function() {
+  it('es capaz de dividir un arreglo par en dos partes', function() {
     // tu código acá 
     expect( split([4,1,6,5,3,2,8,7]) ).toEqual([[4,1,6,5],[3,2,8,7]] );
   });
-  it('es capaz de dividir el arreglo en dos partes', function() {
+  it('es capaz de dividir el arreglo impar en dos partes', function() {
     // tu código acá 
     expect( split([4,1,6,5,3,2,8]) ).toEqual([[4,1,6,5],[3,2,8]] );
   });
@@ -38,12 +38,19 @@ describe('Merge', function(){
     expect( merge([2],[4]) ).toEqual([2,4] );
     
   });
+  it('es capaz de combinar dos Arreglos ordenados en uno solo ordenado', function(){
+    // testeá el algoritmo
+    expect( merge([2,3],[1,4,5,6]) ).toEqual([1,2,3,4,5,6] );
+    
+  });
 });
 
 describe('MergeSort', function(){
+  it('ordena un arreglo', function () {
+    expect(mergeSort([4,2,5,1,6,3])).toEqual([1,2,3,4,5,6]);
+  });
   it('es capaz de ordenar un arreglo desordenado', function(){
     // testeá el algoritmo
     expect(mergeSort([4,2,7,5,8,1,6,3]) ).toEqual([1,2,3,4,5,6,7,8] );
-    
   });
 })
