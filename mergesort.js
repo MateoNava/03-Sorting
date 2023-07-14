@@ -13,38 +13,38 @@ let firstHalf,secondHalf
   return [firstHalf, secondHalf];
 }
 
-//SOLUCION VIDEO REVIEW
-function merge(arr1, arr2) {
-  var i1 = 0;
-  var i2 = 0;
-  var mergedArr = [];
-  while (i1 < arr1.length || i2 < arr2.length) {
-      if (arr1[i1] < arr2[i2] || !arr2[i2]) {
-          mergedArr.push(arr1[i1]);
-          i1++;
-      } else {
-          mergedArr.push(arr2[i2]);
-          i2++;
-      }
-  }
-  return mergedArr;
-}
+// //SOLUCION VIDEO REVIEW
+// function merge(arr1, arr2) {
+//   var i1 = 0;
+//   var i2 = 0;
+//   var mergedArr = [];
+//   while (i1 < arr1.length || i2 < arr2.length) {
+//       if (arr1[i1] < arr2[i2] || !arr2[i2]) {
+//           mergedArr.push(arr1[i1]);
+//           i1++;
+//       } else {
+//           mergedArr.push(arr2[i2]);
+//           i2++;
+//       }
+//   }
+//   return mergedArr;
+// }
 
 //NUESTRA SOLUCION MERGE GENERA UN LOOP ETERNO
-// function merge(arr1=[],arr2=[]){
-//   let newArr=[]
+function merge(arr1=[],arr2=[]){
+  let newArr=[]
 
-//   while(arr1.length>0 || arr2.length>0){
-//     if(arr1[0]<arr2[0]){
-//       let actualValue=arr1.shift()
-//       newArr.push(actualValue)
-//     } else {
-//       let actualValue=arr2.shift()
-//       newArr.push(actualValue)
-//     }
-//   }
-//   return newArr
-// }
+  while(arr1.length>0 && arr2.length>0){
+    if(arr1[0]<arr2[0]){
+      let actualValue=arr1.shift()
+      newArr.push(actualValue)
+    } else {
+      let actualValue=arr2.shift()
+      newArr.push(actualValue)
+    }
+  }
+  return newArr.concat(arr1).concat(arr2)
+}
 
 
 function mergeSort(arr) {
